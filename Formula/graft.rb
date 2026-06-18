@@ -5,21 +5,21 @@
 class Graft < Formula
   desc "Agentless deployment tool extending Docker Compose to cloud via SSH"
   homepage "https://github.com/the-graft-project/graft"
-  version "2.5.1"
+  version "2.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.1/Graft_2.5.1_Darwin_amd64.tar.gz"
-      sha256 "b934f256efb7d5cbf12bcd62540a5d167ac96eaf4dd4231bfabb9d33e60c55a0"
+      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.2/Graft_2.5.2_Darwin_amd64.tar.gz"
+      sha256 "9c33f076435324cf36038304205d0707742ef5fec613f5b56faeee92a9d1329b"
 
       define_method(:install) do
         bin.install "graft"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.1/Graft_2.5.1_Darwin_arm64.tar.gz"
-      sha256 "a63a01e847b9bf2b33aa7f4e9588e85d16d3996f3eef19156977379cdd7475b6"
+      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.2/Graft_2.5.2_Darwin_arm64.tar.gz"
+      sha256 "b6b2d4057f9319fc791d8b3bb106b0d38612e8035b7978647e6b3501297ac4c7"
 
       define_method(:install) do
         bin.install "graft"
@@ -29,15 +29,15 @@ class Graft < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.1/Graft_2.5.1_Linux_amd64.tar.gz"
-      sha256 "da902b98a7fcda087be00b8ae0485dc4c1bae4dc3d12967e3890345ef1ce6f76"
+      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.2/Graft_2.5.2_Linux_amd64.tar.gz"
+      sha256 "4720ca7dad9aac9c13da2025d2fe77787041449e79ca8c342b28ed111fb819b0"
       define_method(:install) do
         bin.install "graft"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.1/Graft_2.5.1_Linux_arm64.tar.gz"
-      sha256 "0982d082e91a25cca598b42626a3ff7006313046f6a880aa4cdf00c5182b30c1"
+      url "https://github.com/The-Graft-Project/Graft/releases/download/v2.5.2/Graft_2.5.2_Linux_arm64.tar.gz"
+      sha256 "46ee9de5250948102d79aac64d1145c191905ddf2c5ff6522c5cd7904e607ff9"
       define_method(:install) do
         bin.install "graft"
       end
